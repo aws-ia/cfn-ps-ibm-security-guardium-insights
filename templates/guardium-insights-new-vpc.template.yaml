@@ -391,7 +391,7 @@ Parameters:
     ConstraintDescription:
       The S3 key prefix can include numbers, lowercase letters, uppercase letters,
       hyphens (-), and forward slashes (/). End the prefix with a forward slash.
-    Default: quickstart-ibm-security-guardium-insights/
+    Default: cfn-ps-ibm-security-guardium-insights/
     Description: >-
       S3 key prefix that is used to simulate a folder for your copy of the deployment assets. Keep the default prefix unless you are customizing the template. Changing the prefix updates code references to point to a new location.
     Type: String
@@ -504,7 +504,7 @@ Rules:
           Fn::Equals: [{ "Ref": "NumberOfOCS" }, "3"]
         AssertDescription: Number of OCS nodes must be 3 for xlarge production size.
 Conditions:
-  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-quickstart']
+  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-ia-us-east-1']
 Resources:
   VPCStack:
     Type: AWS::CloudFormation::Stack

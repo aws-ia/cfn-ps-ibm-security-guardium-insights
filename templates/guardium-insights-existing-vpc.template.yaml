@@ -400,7 +400,7 @@ Parameters:
     ConstraintDescription:
       The S3 key prefix can include numbers, lowercase letters, uppercase letters,
       hyphens (-), and forward slashes (/). End the prefix with a forward slash.
-    Default: quickstart-ibm-security-guardium-insights/
+    Default: cfn-ps-ibm-security-guardium-insights/
     Description:
       S3 key prefix that is used to simulate a folder for your copy of the deployment assets. Keep the default prefix unless you are customizing the template. Changing the prefix updates code references to point to a new location.
     Type: String
@@ -574,7 +574,7 @@ Mappings:
       RHEL79HVM: ami-027da4fca766221c9
       COREOS: ami-0c47fbbc8defcf370
 Conditions:
-  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-quickstart']
+  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-ia-us-east-1']
 Resources:
   GIIAMUser:
     Type: 'AWS::IAM::User'
