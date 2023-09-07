@@ -1,5 +1,5 @@
 project:
-  name: quickstart-ibm-security-guardium-insights
+  name: cfn-ps-ibm-security-guardium-insights
   owner: quickstart-eng@amazon.com
   shorten_stack_name: true
   s3_regional_buckets: true
