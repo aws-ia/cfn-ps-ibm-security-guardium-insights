@@ -985,3 +985,58 @@ Outputs:
   Postdeployment:
     Description: See the deployment guide for postdeployment steps.
     Value: https://fwd.aws/4zzGq?
+  NumberOfAZs:
+    Value:
+      Ref: NumberOfAZs
+  AvailabilityZones:
+    Value: !Join
+        - ','
+        - !Ref AvailabilityZones
+  VPCCIDR:
+    Value:
+      Ref: VPCCIDR
+  PrivateSubnet1ID:
+    Value:
+      Ref: PrivateSubnet1ID
+  DomainName:
+    Value:
+      Ref: DomainName
+  NumberOfMaster:
+    Value:
+      Ref: NumberOfMaster
+  MasterInstanceType:
+    Value:
+      Ref: MasterInstanceType
+  ClusterName:
+    Value:
+      Ref: ClusterName
+  RedhatPullSecret:
+    Value:
+      Ref: RedhatPullSecret
+  StorageType:
+    Value:
+      Ref: StorageType
+  OCSInstanceType:
+    Value:
+      Ref: OCSInstanceType
+  LicenseType:
+    Value:
+      Ref: LicenseType
+  GIVersion:
+    Value:
+      Ref: GIVersion
+  Namespace:
+    Value:
+      Ref: Namespace
+  HostName:
+    Value:
+      Ref: HostName
+  StorageClassRWO:
+    Value:
+      Ref: StorageClassRWO
+  StorageClassRWX:
+    Value:
+      Ref: StorageClassRWX
+  QSS3BucketRegion:
+    Value:
+      Ref: QSS3BucketRegion
