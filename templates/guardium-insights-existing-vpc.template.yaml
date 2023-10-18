@@ -392,7 +392,7 @@ Parameters:
       location.
     MaxLength: 63
     MinLength: 3
-    Default: aws-quickstart
+    Default: aws-ia
     Type: String
   QSS3BucketRegion:
     Default: us-east-1
@@ -643,7 +643,7 @@ Conditions:
   UsingDefaultBucket:
     Fn::Equals:
       - Ref: QSS3BucketName
-      - aws-ia-us-east-1
+      - aws-ia
 Resources:
   GIIAMUser:
     Type: AWS::IAM::User

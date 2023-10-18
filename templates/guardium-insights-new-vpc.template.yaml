@@ -380,7 +380,7 @@ Parameters:
       Name of the S3 bucket for your copy of the deployment assets. Keep the default name unless you are customizing the template. Changing the name updates code references to point to a new location.
     MaxLength: 63
     MinLength: 3
-    Default: 'aws-quickstart'
+    Default: aws-ia
     Type: String
   QSS3BucketRegion:
     Default: 'us-east-1'
@@ -504,7 +504,7 @@ Rules:
           Fn::Equals: [{ "Ref": "NumberOfOCS" }, "3"]
         AssertDescription: Number of OCS nodes must be 3 for xlarge production size.
 Conditions:
-  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-ia-us-east-1']
+  UsingDefaultBucket: !Equals [!Ref QSS3BucketName, 'aws-ia']
 Resources:
   VPCStack:
     Type: AWS::CloudFormation::Stack
