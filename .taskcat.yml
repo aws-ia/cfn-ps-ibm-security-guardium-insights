@@ -53,4 +53,4 @@ tests:
     regions:
     - us-east-1
     s3_bucket: ''
-    template: templates/ibm-security-root.template.yaml
+    template: templates/guardium-insights-new-vpc.template.yaml
